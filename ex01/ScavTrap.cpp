@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 09:32:56 by oelbied           #+#    #+#             */
-/*   Updated: 2025/11/28 15:46:42 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/11/28 17:12:08 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ScavTrap::ScavTrap(const ScavTrap &op) : ClapTrap(op)
 }
 ScavTrap &ScavTrap::operator=(const ScavTrap &op)
 {
+     std::cout << "ScavTrap cope assignment operaator called" << std::endl;
     if (this != &op)
     {
         ScavTrap::operator=(op);

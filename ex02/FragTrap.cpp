@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 14:04:53 by oelbied           #+#    #+#             */
-/*   Updated: 2025/11/28 17:06:18 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/11/28 17:11:47 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ FragTrap::FragTrap(const FragTrap &op) : ClapTrap(op)
 
 FragTrap &FragTrap::operator=(const FragTrap &op)
 {
+    std::cout << "Fragtrap cope assignment operaator called" << std::endl;
     if (this != &op)
     {
         ClapTrap::operator=(op);
     }
     return *this;
-    std::cout << "Fragtrap cope assignment operaator called" << std::endl;
 }
 
 void FragTrap::highFivesGuys()
