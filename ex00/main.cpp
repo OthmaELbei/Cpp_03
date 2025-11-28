@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:10:22 by oelbied           #+#    #+#             */
-/*   Updated: 2025/11/24 11:45:44 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/11/28 16:50:35 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 int main()
 {
-
     ClapTrap d("ahmed");
     d.attack("zombie");
     d.takeDamage(4);
-    d.beRepaired(3);
+    d.beRepaired(5);
 }

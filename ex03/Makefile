@@ -6,7 +6,7 @@
 #    By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/25 14:09:31 by oelbied           #+#    #+#              #
-#    Updated: 2025/11/25 14:10:36 by oelbied          ###   ########.fr        #
+#    Updated: 2025/11/27 17:39:04 by oelbied          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FILES =  ClapTrap.cpp FragTrap.cpp main.cpp  ScavTrap.cpp DiamondTrap.cpp
 
 OPJECT = $(FILES:.cpp=.o)
 
-NAME = FragTrap
+NAME = DiamondTrap
 
 all : $(NAME)
 

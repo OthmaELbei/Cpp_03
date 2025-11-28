@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 14:04:53 by oelbied           #+#    #+#             */
-/*   Updated: 2025/11/25 14:08:25 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/11/28 17:06:11 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,42 @@
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap " << getName() << " destroyed " << std::endl;
+    std::cout << "FragTrap " << Name << " destroyed " << std::endl;
 }
-void FragTrap::highFivesGuys()
+
+FragTrap::FragTrap() : ClapTrap("default")
 {
-    std::cout << "FragTrap " << getName() << "requests a high five! " << std::endl;
+    Hitpoint = 100;
+    Energy = 100;
+    Attack = 30;
+    std::cout << "FragTrap " << Name << " constructed" << std::endl;
 }
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-    setHitpoint(100);
-    setEnergy(100);
-    setAttack(30);
-    std::cout << "FragTrap " << getName() << " constructed" << std::endl;
+    Hitpoint = 100;
+    Energy = 100;
+    Attack = 30;
+    std::cout << "FragTrap " << Name << " constructed" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap &op) : ClapTrap(op)
+{
+    std::cout << "this FragTrap copy constructer" << std::endl;
+    *this = op;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &op)
+{
+    std::cout << "Fragtrap cope assignment operaator called" << std::endl;
+    if (this != &op)
+    {
+        ClapTrap::operator=(op);
+    }
+    return *this;
+}
+
+void FragTrap::highFivesGuys()
+{
+    if (Hitpoint > 0 )
+        std::cout << "FragTrap " << Name << " requests a high five! " << std::endl;
 }
