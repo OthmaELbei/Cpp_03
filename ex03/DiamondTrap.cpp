@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:03:30 by oelbied           #+#    #+#             */
-/*   Updated: 2025/11/28 16:45:23 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/11/29 14:55:46 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ DiamondTrap::DiamondTrap():FragTrap("default"),ScavTrap("default")
     std::cout << "DiamondTrap difolt constructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : FragTrap(name),ScavTrap(name), Name(name)
+DiamondTrap::DiamondTrap(std::string name) :ClapTrap(name + "_clap_name") ,FragTrap(name),ScavTrap(name), Name(name)
 {
     Hitpoint = 100;
     Energy = 50;
